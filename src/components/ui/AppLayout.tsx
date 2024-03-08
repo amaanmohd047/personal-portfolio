@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import React from "react";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Experience from "../Experience/Experience";
@@ -10,13 +11,14 @@ import Navbar from "./Navbar";
 import SocialLinks from "./SocialLinks";
 import LogoSVG from "./LogoSVG";
 
-export default function AppLayout() {
+const AppLayout: React.FC<{ contactRef: React.RefObject<HTMLDivElement> }> = ({
+  contactRef,
+}) => {
   const [displayLogo, setDisplayLogo] = useState(true);
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
 
   const allRefs = [homeRef, aboutRef, projectsRef, experienceRef, contactRef];
 
@@ -59,4 +61,5 @@ export default function AppLayout() {
       )}
     </div>
   );
-}
+};
+export default AppLayout;

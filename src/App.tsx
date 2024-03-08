@@ -5,14 +5,16 @@ import Projects from "./components/Projects/Projects";
 import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
 import Home from "./components/Home/Home";
+import { useRef } from "react";
 
 function App() {
+  const contactRef = useRef<HTMLDivElement>(null);
   return (
     <>
       <Routes>
-        <Route element={<AppLayout />}>
+        <Route element={<AppLayout contactRef={contactRef} />}>
           <Route index element={<Navigate replace to="/" />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home contactRef={contactRef} />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/experience" element={<Experience />} />
