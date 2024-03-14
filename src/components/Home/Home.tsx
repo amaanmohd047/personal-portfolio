@@ -1,12 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 import ButtonGroup from "./ButtonGroup";
+import useInViewSection from "../../utils/useInViewSection";
 
 const Home: React.FC<{ contactRef: React.RefObject<HTMLDivElement> }> = (
   contactRef
 ) => {
+  const { ref } = useInViewSection("home", 0.5);
+
   return (
-    <>
+    <div
+      className="flex items-center flex-col justify-center h-full w-full"
+      ref={ref}
+    >
       <div className="flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -31,24 +38,24 @@ const Home: React.FC<{ contactRef: React.RefObject<HTMLDivElement> }> = (
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="mt-3 sm:text-xl"
+        className="mt-3 sm:text-xl flex flex-col"
       >
-        <div className="pt-8 pb-4 sm:text-[1.2rem] text-green-dark font-mono">
+        <h1 className="py-1 md:py-3 lg:py-5sm:pt-8 sm:pb-4 sm:text-[1.2rem] lg:text-[1.2rem] text-green-dark font-mono">
           <span className="sm:text-[2rem] ">Hi,</span> my name is
-        </div>
-        <div className="py-5 sm:text-[5rem] font-bold tracking-tighter	text-slate-light">
+        </h1>
+        <h1 className="py-1 max-[360px]:text-[1.7rem] md:py-3 lg:py-5 lg:text-[5rem] md:text-[3.8rem] text-[2rem] font-bold tracking-tighter	text-slate-light">
           {" "}
           Mohammed Amaan.
-        </div>
-        <div className="py-5 pt-8 sm:text-[3.5rem] font-semibold text-slate-regular">
+        </h1>
+        <h2 className="sm:py-3 lg:py-5 md:text-[3rem] max-[360px]:text-[1.5rem] font-semibold text-slate-regular">
           I am a software developer.
-        </div>{" "}
-        <div className="pt-3 sm:text-[3rem] text-slate-dark font-semibold">
+        </h2>{" "}
+        <h3 className="py-1 md:py-3 lg:py-5 md:text-[2.5rem] text-slate-dark font-semibold max-[360]:text-[1.35rem]">
           I enjoy building web apps.
-        </div>
+        </h3>
       </motion.div>
       <ButtonGroup contactRef={contactRef.contactRef} />
-    </>
+    </div>
   );
 };
 

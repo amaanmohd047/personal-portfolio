@@ -5,7 +5,6 @@ import Contact from "../Contact/Contact";
 import Experience from "../Experience/Experience";
 import Home from "../Home/Home";
 import Projects from "../Projects/Projects";
-import Logo from "./Logo";
 import Mail from "./Mail";
 import Navbar from "./Navbar";
 import SocialLinks from "./SocialLinks";
@@ -22,40 +21,55 @@ const AppLayout: React.FC<{ contactRef: React.RefObject<HTMLDivElement> }> = ({
 
   const allRefs = [homeRef, aboutRef, projectsRef, experienceRef, contactRef];
 
-  setTimeout(() => setDisplayLogo(false), 4500);
+  setTimeout(() => setDisplayLogo(false), 3500);
 
   return (
-    <div className="w-[100dvw] h-auto bg-scroll bg-gradient-to-br from-navy-regular from-45% to-navy-lightest scroll-smooth">
+    <div className="antialiased w-[100dvw] h-auto bg-scroll bg-gradient-to-br from-navy-regular from-45% to-navy-lightest scroll-smooth">
       {displayLogo ? (
         <>
           <LogoSVG />
         </>
       ) : (
-        <div className="antialiased flex flex-col items-center relative ">
-          <Logo />
-          <Mail />
+        <div className="flex flex-col items-center relative ">
           <SocialLinks />
+          <Mail />
           <Navbar allRefs={allRefs} />
+
           <header
             ref={homeRef}
-            className="mb-28 max-w-[50rem] h-[100vh] min-h-[100vh] pt-[7rem] sm:pt-[8rem]"
+            className="max-w-[85vw] h-[100vh] min-h-[100vh]"
           >
             <Home contactRef={contactRef} />
           </header>
+
           <main>
-            <section ref={aboutRef} className="py-[100rem]">
+            {/* ABOUT */}
+            <section
+              className=" max-w-[85vw] sm:m-auto sm:max-w-[60vw] scroll-mt-16 md:scroll-mt-24 text-center"
+              ref={aboutRef}
+            >
               <About />
             </section>
-            <section ref={projectsRef} className="py-[100rem]">
+
+            {/* PROJECTS */}
+            <section
+              ref={projectsRef}
+              className="max-w-[85vw] sm:max-w-[60vw] scroll-mt-16 mt-24 md:scroll-mt-24"
+            >
               <Projects />
             </section>
-            <section ref={experienceRef} className="py-[100rem]">
+
+            {/* EXPERIENCE */}
+            <section ref={experienceRef}>
               <Experience />
             </section>
           </main>
-          <footer ref={contactRef} className="py-[100rem]">
+
+          <footer
+            ref={contactRef}
+            className="max-w-[85vw] sm:max-w-[60vw] min-h-[55vh] pt-[6rem]"
+          >
             <Contact />
-            º⎮⎪
           </footer>
         </div>
       )}

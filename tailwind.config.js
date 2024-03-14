@@ -43,6 +43,10 @@ export default {
           "monospace",
         ],
       },
+      boxShadow: {
+        "neu-sm": "4px 4px 8px #081425, -4px -4px 8px #0c1e39",
+        "neu-md": "10px 10px 20px #081425, -10px -10px 20px #0c1e39;",
+      },
       transitionTimingFunction: {
         "in-expo": "cubic-bezier(0.645, 0.045, 0.355, 1)",
       },

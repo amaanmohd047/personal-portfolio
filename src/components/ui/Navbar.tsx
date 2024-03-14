@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import React, { RefObject } from "react";
 import NavItem from "./NavItem";
+import { useActiveSectionContext } from "../../context/ActiveSectionContext";
 
 const Navbar: React.FC<{
   allRefs: RefObject<HTMLDivElement>[];
 }> = ({ allRefs }) => {
-  const [homeRef, aboutRef, projectsRef, experienceRef, contactRef] = allRefs;
+  const [homeRef, aboutRef, projectsRef, contactRef] = allRefs;
+  const { activeSection, setActiveSection, handleNavClick } =
+    useActiveSectionContext();
 
   return (
     <nav className="z-[50] relative ">
@@ -16,25 +19,72 @@ const Navbar: React.FC<{
         transition={{ ease: "easeOut", duration: 0.75 }}
       >
         <ul className="flex gap-2 w-full h-full flex-wrap justify-evenly items-center sm:py-3 sm:px-4 text-slate-light font-sans text-xs sm:text-sm">
-          <NavItem pageRef={homeRef} route="">
-            Home
-          </NavItem>
+          <span
+            className={`${
+              !activeSection ||
+              (activeSection === "home" && "text-green-regular")
+            }`}
+            onClick={() => {
+              setActiveSection("");
+              handleNavClick();
+            }}
+          >
+            <NavItem pageRef={homeRef} route="">
+              Home
+            </NavItem>
+          </span>
 
-          <NavItem pageRef={aboutRef} route="/about">
-            About
-          </NavItem>
+          <span
+            className={`${activeSection === "about" && "text-green-regular"}`}
+            onClick={() => {
+              setActiveSection("about");
+              handleNavClick();
+            }}
+          >
+            <NavItem pageRef={aboutRef} route="about">
+              About
+            </NavItem>
+          </span>
 
-          <NavItem pageRef={projectsRef} route="/projects">
-            Projects
-          </NavItem>
+          <span
+            className={`${
+              activeSection === "projects" && "text-green-regular"
+            }`}
+            onClick={() => {
+              setActiveSection("projects");
+              handleNavClick();
+            }}
+          >
+            <NavItem pageRef={projectsRef} route="projects">
+              Projects
+            </NavItem>
+          </span>
 
-          <NavItem pageRef={experienceRef} route="/experience">
+          {/* 
+          <span
+            className={`${activeSection === "experience" && "text-green-regular"}`}
+            onClick={() => {
+              setActiveSection("experience");
+              handleNavClick()
+            }}
+          >
+          <NavItem pageRef={experienceRef} route="experience">
             Experience
-          </NavItem>
+          </NavItem> 
+          </span>
+          */}
 
-          <NavItem pageRef={contactRef} route="contact">
-            Contact
-          </NavItem>
+          <span
+            className={`${activeSection === "contact" && "text-green-regular"}`}
+            onClick={() => {
+              setActiveSection("contact");
+              handleNavClick();
+            }}
+          >
+            <NavItem pageRef={contactRef} route="contact">
+              Contact
+            </NavItem>
+          </span>
         </ul>
       </motion.div>
     </nav>

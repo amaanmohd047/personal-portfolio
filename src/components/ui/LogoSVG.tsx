@@ -2,7 +2,7 @@ function LogoSVG() {
   return (
     <div className="logo-container">
       <div className="logo-wrapper">
-        <div className="logo-shift-animation">
+        <div className=" logo-shift-animation">
           <svg
             version="1.1"
             id="Layer_1"

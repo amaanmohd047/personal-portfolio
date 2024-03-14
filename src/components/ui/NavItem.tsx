@@ -6,7 +6,8 @@ const NavItem: React.FC<{
   pageRef: React.RefObject<HTMLDivElement>;
   route: string;
   children: string;
-}> = ({ pageRef, route, children }) => {
+}> = ({ pageRef, route, children}) => {
+
   return (
     <li className="hover:text-green-regular transition-all duration-150 ease-in-expo font-mono">
       <RouterLink
