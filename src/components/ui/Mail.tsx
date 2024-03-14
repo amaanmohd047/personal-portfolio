@@ -14,7 +14,7 @@ const Mail: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="absolute sm:hidden flex justify-center w-[50%] max-w-[80%] bottom-0 text-slate-light">
+      {/* <div className="absolute sm:hidden flex justify-center w-[50%] max-w-[80%] bottom-0 text-slate-light">
         <div className="hover:text-green-regular transition-all duration-300 ease-in-expo cursor-pointer p-3 mb-5 tracking-wider hover:tracking-widest leading-5 hover:translate-y-[-2px]">
           <a
             href="mailto:amaanmohd047@gmail.com"
@@ -24,7 +24,7 @@ const Mail: React.FC = () => {
             amaanmohd047@gmail.com
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -22,7 +22,7 @@ const Projectcard: React.FC<{ project: ProjectType }> = ({ project }) => {
         opacity: opacityProgress,
       }}
     >
-      <div className="group md:bg-navy-regular shadow-neu-sm md:pr-8 border border-navy-dark/5 rounded-lg text-left p-2 relative overflow-hidden mx-auto h-[23rem] text-slate-regular no-underline lg:w-[40rem] md:w-[32rem]">
+      <div className="group md:bg-navy-regular shadow-neu-sm md:pr-8 border border-navy-dark/5 rounded-lg text-left p-2 relative overflow-hidden mx-auto h-[20rem] md:h-[23rem] text-slate-regular no-underline lg:w-[40rem] md:w-[32rem]">
         <ProjectDescription project={project} />
         <ProjectImage project={project} />
       </div>

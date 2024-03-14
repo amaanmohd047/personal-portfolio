@@ -7,12 +7,12 @@ const ProjectDescription: React.FC<{ project: ProjectType }> = ({
   project,
 }) => {
   return (
-    <div className="z-10 p-3 sm:p-5 flex flex-col gap-4 pt-4 justify-between h-full sm:max-w-[50%] ">
+    <div className="z-10 p-3 sm:p-5 flex flex-col gap-4 pt-4 justify-between h-full md:max-w-[50%] ">
       <div className="space-y-2">
         <h2 className="text-[1.4rem] font-bold tracking-wide z-50 text-slate-lightest">
           {project.title}
         </h2>
-        <p className="text-xs sm:text-sm md:text-xs lg:text-sm">
+        <p className="text-sm sm:text-sm md:text-xs lg:text-sm">
           {project.description}
         </p>
       </div>
@@ -40,7 +40,7 @@ const ProjectDescription: React.FC<{ project: ProjectType }> = ({
             )}
           </div>
           <div className="hover:text-green-regular transition-all w-auto h-auto duration-150 ease-in-expo font-mono hover:translate-y-[-2px] cursor-pointer py-3">
-          {project.githubLink ? (
+            {project.githubLink ? (
               <a href={project.githubLink} target="_blank">
                 <FiGithub />
               </a>

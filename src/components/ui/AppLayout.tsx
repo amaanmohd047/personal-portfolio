@@ -1,10 +1,12 @@
 import { useRef, useState } from "react";
 import React from "react";
+
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Experience from "../Experience/Experience";
 import Home from "../Home/Home";
 import Projects from "../Projects/Projects";
+
 import Mail from "./Mail";
 import Navbar from "./Navbar";
 import SocialLinks from "./SocialLinks";

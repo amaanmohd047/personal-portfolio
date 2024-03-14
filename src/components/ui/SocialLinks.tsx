@@ -27,7 +27,7 @@ const SocialLinks: React.FC = () => {
       </div>
 
       {/* for smaller screens */}
-      <div className="flex sm:hidden absolute bottom-12 max-w-[60%] w-[40%] justify-between text-slate-regular text-xl">
+      <div className="flex sm:hidden absolute bottom-0 max-w-[60%] w-[40%] justify-between text-slate-regular text-xl">
         <div className="hover:text-green-regular transition-all w-auto h-auto duration-150 ease-in-expo font-mono hover:translate-y-[-2px] cursor-pointer py-3">
           <a href="https://github.com/amaanmohd047" target="_blank">
             <FiGithub />
