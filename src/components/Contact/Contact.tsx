@@ -46,7 +46,7 @@ export default function Contact() {
               onBlur={handleResetCopy}
               className="text-slate-lightest text-sm lg:text-base font-mono tracking-tighter mt-2 underline underline-offset-4 hover:scale-105 hover:text-green-regular transition-all duration-200 ease-in-expo focus:text-green-regular focus:no-underline"
             >
-              Get E-Mail {copied && "✔️ copied"}
+              Get E-Mail {copied && "✔️ copied! "}
             </button>
           </FadeInWrapper>
         </div>
