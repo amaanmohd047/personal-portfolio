@@ -28,7 +28,7 @@ const ProjectDescription: React.FC<{ project: ProjectType }> = ({
           ))}
         </ul>
         <div className="flex gap-4 px-2 justify-start items-center z-3">
-          <div className="hover:text-green-regular transition-all w-auto h-auto duration-150 ease-in-expo font-mono hover:translate-y-[-2px] cursor-pointer py-3">
+          <div className="hover:text-green-regular transition-all w-auto h-auto duration-150 ease-in-expo font-mono hover:translate-y-[-2px] cursor-pointer py-3 z-10">
             {project.demoLink ? (
               <a href={project.demoLink} target="_blank">
                 <FaExternalLinkAlt />
@@ -39,7 +39,7 @@ const ProjectDescription: React.FC<{ project: ProjectType }> = ({
               </span>
             )}
           </div>
-          <div className="hover:text-green-regular transition-all w-auto h-auto duration-150 ease-in-expo font-mono hover:translate-y-[-2px] cursor-pointer py-3">
+          <div className="hover:text-green-regular transition-all w-auto h-auto duration-150 ease-in-expo font-mono hover:translate-y-[-2px] cursor-pointer py-3 z-10">
             {project.githubLink ? (
               <a href={project.githubLink} target="_blank">
                 <FiGithub />

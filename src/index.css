@@ -18,13 +18,13 @@ body {
 }
 
 .stroke-array-start {
-  stroke-dasharray: 572;
-  stroke-dashoffset: 572;
-  animation: line-animation 1.75s forwards, fill-anime 1.5s forwards 1.75s;
+  /* stroke-dasharray: 100; */
+  /* stroke-dashoffset: 5; */
+  animation: line-animation 2.5s forwards, fill-anime 1.5s forwards 1.75s;
 }
 
 .logo-fill-animation {
-  animation: fill-anime 1.5s forwards 1.75s;
+  animation: fill-anime 0.75s forwards 1.75s;
 }
 
 .logo-shift-animation {
@@ -50,8 +50,8 @@ body {
 .logo-container {
   width: 100vw;
   height: 100vh;
-  /* background: #0a192f; */
   background: radial-gradient(circle farthest-side, #0a192f, #0c1421);
+  /* background: #0a192f; */
   /* background: radial-gradient(circle closest-corner at center 125px, #0a192f, #090f18); */
   /* background: radial-gradient(circle, #0a192f, #0c1421); */
   position: fixed;
@@ -82,9 +82,19 @@ body {
 }
 
 @keyframes line-animation {
-  to {
+  0% {
+    stroke-dashoffset: 5000;
+    stroke-dasharray: 5000;
+  }
+
+  85% {
+    /* stroke-dashoffset: 0; */
+    /* stroke-dasharray: 30; */
+  }
+
+  100% {
     stroke-dashoffset: 0;
-    stroke-dasharray: 0;
+    stroke-dasharray: 1000;
   }
 }
 
