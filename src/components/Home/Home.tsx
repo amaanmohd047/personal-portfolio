@@ -45,13 +45,13 @@ const Home: React.FC<{ contactRef: React.RefObject<HTMLDivElement> }> = (
         </h1>
         <h1 className="py-1 max-[360px]:text-[1.7rem] md:py-3 lg:py-5 lg:text-[5rem] md:text-[3.8rem] text-[2rem] font-bold tracking-tighter	text-slate-light">
           {" "}
-          Mohammed Amaan.
+          Mohammed Amaan
         </h1>
         <h2 className="sm:py-3 lg:py-5 md:text-[3rem] max-[360px]:text-[1.5rem] font-semibold text-slate-regular">
-          I am a software developer.
+          I am a software developer
         </h2>{" "}
-        <h3 className="py-1 md:py-3 lg:py-5 md:text-[2.5rem] text-slate-dark font-semibold max-[360]:text-[1.35rem]">
-          I enjoy building web apps.
+        <h3 className="py-1 md:py-3 leading-1 lg:py-5 md:text-[2.5rem] text-slate-dark font-semibold max-[360]:text-[1.35rem]">
+          I enjoy building web apps
         </h3>
       </motion.div>
       <ButtonGroup contactRef={contactRef.contactRef} />
