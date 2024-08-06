@@ -33,7 +33,6 @@ const Navbar: React.FC<{
               Home
             </NavItem>
           </span>
-
           <span
             className={`${activeSection === "about" && "text-green-regular"}`}
             onClick={() => {
@@ -45,7 +44,6 @@ const Navbar: React.FC<{
               About
             </NavItem>
           </span>
-
           <span
             className={`${
               activeSection === "projects" && "text-green-regular"
@@ -59,7 +57,6 @@ const Navbar: React.FC<{
               Projects
             </NavItem>
           </span>
-
           {/* 
           <span
             className={`${activeSection === "experience" && "text-green-regular"}`}
@@ -73,7 +70,6 @@ const Navbar: React.FC<{
           </NavItem> 
           </span>
           */}
-
           <span
             className={`${activeSection === "contact" && "text-green-regular"}`}
             onClick={() => {
