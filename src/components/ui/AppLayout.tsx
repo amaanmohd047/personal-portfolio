@@ -30,6 +30,7 @@ const AppLayout: React.FC<{ contactRef: React.RefObject<HTMLDivElement> }> = ({
 
   return (
     <div className="antialiased w-[100dvw] h-auto bg-scroll bg-gradient-to-br from-navy-regular from-45% to-navy-lightest scroll-smooth">
+      <div className="inset-0 bg-navy-regular fixed"></div>
       {displayLogo ? (
         <>
           <LogoSVG />
