@@ -27,9 +27,9 @@ const ButtonGroup: React.FC<{ contactRef: React.RefObject<HTMLDivElement> }> = (
           <HiOutlineArrowRight className="group-hover:translate-x-1 transition scale-95 group-hover:scale-105" />
         </Button>
       </Link>
-      <a href="/Resume.pdf" target="_blank">
+      <a href="/Resumé.pdf" target="_blank">
         <Button type="secondary">
-          <span>Get Resume</span>
+          <span>Get Resumé</span>
           <HiDownload className="group-hover:translate-y-[0.5px] group-hover:translate-x-1 scale-95 group-hover:scale-110 transition" />
         </Button>
       </a>
