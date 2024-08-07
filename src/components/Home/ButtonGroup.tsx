@@ -29,7 +29,7 @@ const ButtonGroup: React.FC<{ contactRef: React.RefObject<HTMLDivElement> }> = (
       </Link>
       <a href="/Resumé.pdf" target="_blank">
         <Button type="secondary">
-          <span>Get Resumé</span>
+          <span>Get Resume</span>
           <HiDownload className="group-hover:translate-y-[0.5px] group-hover:translate-x-1 scale-95 group-hover:scale-110 transition" />
         </Button>
       </a>
