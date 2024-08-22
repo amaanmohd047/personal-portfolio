@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import React from "react";
 
-import SuprSendInbox from "@suprsend/react-inbox";
 import "react-toastify/dist/ReactToastify.css";
 
 import About from "../About/About";
@@ -37,20 +36,6 @@ const AppLayout: React.FC<{ contactRef: React.RefObject<HTMLDivElement> }> = ({
         </>
       ) : (
         <div className="flex flex-col items-center relative ">
-          <div className="fixed top-5 right-12">
-            <SuprSendInbox
-              themeType="dark"
-              theme={{
-                badge: { backgroundColor: "#0a192f" },
-                notification: { unseenDot: { backgroundColor: "gray" } },
-
-              }}
-              workspaceKey="VITE_SUPRSEND_WORKSPACE_KEY"
-              subscriberId="<subscriber_id>"
-              distinctId="VITE_SUPRSEND_DISTINCT_KEY"
-            />
-          </div>
-
           <SocialLinks />
           <Mail />
           <Navbar allRefs={allRefs} />

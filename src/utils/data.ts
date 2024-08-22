@@ -17,16 +17,6 @@ export type SectionName =
 
 export const projectData: ProjectType[] = [
   {
-    title: "Homecooked Theme",
-    description:
-      "A high contrast theme for Visual Studio Code based in moonlight palette.",
-    tags: ["VS Code", "JSON"],
-    imageSrc: "/homecooked-ss.png",
-    demoLink:
-      "https://marketplace.visualstudio.com/items?itemName=MohammedAmaan.homecooked",
-    githubLink: "https://github.com/amaanmohd047/homecooked-theme",
-  },
-  {
     title: "Manoramam",
     description:
       "A complete end-to-end solution for a boutique hotel. It contains, a user landing page, a hotel management app.",
@@ -38,23 +28,33 @@ export const projectData: ProjectType[] = [
       "Styled Components",
     ],
     imageSrc: "/manoramam-ss.png",
-    demoLink: "",
-    githubLink: "",
+    demoLink: "https://manoramam-dashboard.vercel.app/",
+    githubLink: "https://github.com/amaanmohd047/Manoramam-Dashboard",
   },
   {
-    title: "Worldwise",
+    title: "Homecooked Theme",
     description:
-      "An app with an interactive map that keeps tracks of your travels. You can also add notes about the place you have visited.",
+      "A high contrast theme for Visual Studio Code based in moonlight palette.",
+    tags: ["VS Code", "JSON"],
+    imageSrc: "/homecooked-ss.png",
+    demoLink:
+      "https://marketplace.visualstudio.com/items?itemName=MohammedAmaan.homecooked",
+    githubLink: "https://github.com/amaanmohd047/homecooked-theme",
+  },
+  {
+    title: "Vistas Voyage",
+    description: "An API for a travel agency",
     tags: [
-      "React",
-      "React Router",
-      "React Leaflet",
-      "Geolocation API",
-      "Context API",
-      "CSS Modules",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Passport.js",
+      "Postman",
+      "Github Actions",
     ],
-    imageSrc: "/worldwise-ss.png",
-    demoLink: "https://worldwise-vs.netlify.app/",
-    githubLink: "https://github.com/amaanmohd047/worldwise",
+    imageSrc: "/vistas-voyage-ss.png",
+    demoLink: "https://documenter.getpostman.com/view/31239846/2sA3JJAPcL",
+    githubLink: "https://github.com/amaanmohd047/VistaVoyageAPI",
   },
 ];
